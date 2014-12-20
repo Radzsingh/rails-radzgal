@@ -1,0 +1,108 @@
+.im
+{
+	
+	background-image:url('background.jpg')
+}
+
+
+    @-webkit-keyframes spaceboots {
+    0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+    10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+    30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+    50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+    90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+    }
+    .move:hover,
+    .move:focus {
+    -webkit-animation-name: spaceboots;
+    -webkit-animation-duration: 0.8s;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    
+    }
+    .move {
+    display:inline-block
+    }
+
+h1, h2, h3, h5, h6 {
+color: #730E15;
+font-family: times, Times New Roman, times-roman, georgia, serif;
+		font-size: 48px;
+	        line-height: 40px;
+	        letter-spacing: -1px;
+		color: #444;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+                font-weight: 100;
+                
+               }
+
+.img_prop:hover,
+.img_prop:focus {
+	-webkit-animation-name: spaceboots;
+    -webkit-animation-duration: 0.8s;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    	
+}
+.img_prop
+{
+	 display:inline-block;
+}
+
+.chgtxt
+{
+	
+	
+	border: 1px solid #d4d4d4;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 4px;
+	
+	line-height: 1em;
+	float: left;
+	height:30px;
+	
+	box-shadow: inset 0px 2px 2px #ececec;
+}
+.btnsty
+{
+	background-color:#282828;
+	color:#CC6666;
+	width:30px;
+	height:30px;
+	border-bottom-right-radius: 5px;
+	border: 1px solid #d4d4d4;
+}
+div.fileinputs {
+	position: relative;
+}
+
+div.fakefile {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+input.file {
+	position: relative;
+	text-align: right;
+	-moz-opacity:0 ;
+	filter:alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+}
+
+#tem.hover
+{
+	style="box-shadow:0px 0px 30px #ececec;
+}
+}

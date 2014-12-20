@@ -1,0 +1,56 @@
+
+<html>
+	<head>
+<%= stylesheet_link_tag "test.css" %>
+</head>
+<body>
+<div style="height:100%; width:100%" class="im">
+
+	<div style="width:100%; margin-top:20px; background-color:#CC6666; ">
+		<table style="margin-left:35%">
+			<tr>
+				<td>
+					<div class="move">
+					<%= link_to image_tag("folder.png",:height=>120,:width=>120,:class=>"img_prop", :alt=>"Create a new album" ),new_user_album_path  %></div>
+					
+					</td>
+					<td>
+						<span style="color:#282828; font-size: 30px;"><%= link_to "Click to create your album",new_user_album_path  %></span>
+						</td>
+						</tr>
+						</table>
+						</div>
+		
+	
+	<div style="margin-top:10px;">
+		<div class="container">
+		<div class="jumbotron" style="background-color:#A8C6EF; width:100%;">
+    <h1 style="margin-left:370px;">Your stuff</h1> <br/>
+    <p style="margin-left:230px;">Look out for the pics and albums you have uploaded so far.</p> 
+  </div>
+</div>
+<table margin="30%"  cellpadding="30" cellspacing="30"  class="table-hover" style="width:60%; margin:0 auto; ">
+	
+ <tr>
+    <th class="do"><span style="font-size: 35px;">Name</span></th>
+    <th class="do"><span style="font-size: 35px;">Details</span></th>
+    <th class="do"><span style="font-size: 35px;">Action</span></th>
+  </tr>
+  <% @albums.each do |a| %>
+    <tr>
+      <td  ><div class="move"><%=link_to image_tag("foldershow.gif", :height=>100, :width=>100),user_album_path(current_user.id,a) %></div></td>
+      <td class="do"><span style="font-size: 35px;"><%=  a.album_name %></span></br>
+     <span style="font-size:25px;"><%= a.created_at %></span>
+      </td> <td class="move" style="margin-top:35px"><%= link_to image_tag("show.png" , :height=>50, :width=>50, :alt=>"Click to open"), user_album_path(current_user.id,a) %></td>
+    <td class="move" style="margin-top:35px"><%= link_to image_tag("edit.png",:height=>50,:width=>50, :alt=>"Click to Rename"), edit_user_album_path(current_user.id,a) %></td>
+   <td class="move" style="margin-top:30px"><%= link_to image_tag("delete.png",:height=>50,:width=>50, :alt=>"Click to delete" ), user_album_path(current_user.id,a),method: :delete, data: { confirm: 'Are you sure?' } %></td>
+   
+    </tr>
+  <% end %>
+</table>
+
+
+</div>
+
+</div>
+</body>

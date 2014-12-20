@@ -1,3 +1,8 @@
 <h3>User</h3>
 <p>Name: <%= @user.name if @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
+<p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
+<p>
+	
+<%=link_to image_tag("folder.png", :height=>70, :width=>70), new_user_album_path(@user) %>
+</p>

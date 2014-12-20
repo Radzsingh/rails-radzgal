@@ -12,8 +12,10 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'debugger'
 gem 'simple_form'
 gem 'therubyracer', :platform=>:ruby
+gem "paperclip", "~> 4.2.0"
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]

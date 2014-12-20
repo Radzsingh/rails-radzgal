@@ -1,6 +1,15 @@
 <%# navigation styled for Bootstrap 3.0 %>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
+<nav class="navbar navbar-inverse navbar-fixed-top" id="temp" style="box-shadow:0px 0px 30px #282828;">
+<table>
+<tr>
+<td>
+<div class="move" style="margin:0px; padding:0px; width:300px; height:50px;">
+  <%= image_tag("logo.png", :alt => "rss feed",:height=>10, :width=>170) %>
+  </div>
+  </td>
+  <td>
+  <div class="container" >
+  
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
@@ -16,4 +25,8 @@
       </ul>
     </div>
   </div>
+  </td></tr>
+  </table>
 </nav>
+
+

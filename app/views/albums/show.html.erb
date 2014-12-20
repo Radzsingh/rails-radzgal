@@ -1,0 +1,38 @@
+<html>
+	<head>
+<%= stylesheet_link_tag "test.css" %>
+</head>
+<body>
+	  <p>
+	  	<div style="width=100%; margin-top:10px; background-color:#CC6666; padding:10px; overflow:none;">
+			<div style="margin-left:5%;">
+					<span style="font-size:30px"><b>Hi!</b> <%=current_user.name %> </span><br/>
+			</div>
+		</div>
+	  </p>
+	  
+	  <p>
+	  	
+	 	<div style="width=100%; margin-top:10px; background-color:#A8C6EF; padding:10px; overflow:none;">
+			<div style="margin-left:5%;">
+	  	
+  <strong><span style="font-size:25px; color:#CC6666;">Album Name:</span></strong>
+ <span style="font-size:17px; color:#282828;"> <%= @album.album_name %></span>
+</p>
+ <p>
+ 	
+ </p>
+ <%= form_for @image, url: user_album_images_path(current_user.id,@album.id) do |f| %>
+  <div style="width:240px">
+  <%= f.file_field :imageval,:class=>"form-control" %>
+  </div><br/></br/>
+ 
+  <%= f.submit 'Create',:class=>"btn btn-primary"%>
+  
+  
+<% end %> 
+ 
+</div>
+</div>
+ </body>
+ </html>

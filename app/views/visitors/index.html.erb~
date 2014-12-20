@@ -1,0 +1,4 @@
+<h3>Welcome</h3>
+<p><%= link_to 'Uservfsdvs:', users_path %> <%= User.count %> registered</p>
+
+<link_to "Create a new Album", >

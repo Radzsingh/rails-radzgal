@@ -1,0 +1,42 @@
+
+<html>
+	<head>
+<%= stylesheet_link_tag "test.css" %>
+</head>
+<body>
+
+<%= form_for Album.new, url: user_albums_path do |u|%>
+<div style="width=100%; margin-top:10px; background-color:#CC6666; padding:10px; overflow:none;">
+<div style="margin-left:5%;">
+	
+<span style="font-size:30px"><b>Hi!</b> <%=current_user.name %> </span><br/>
+		<span style="font-size:20px;">Create your Album here</h3>
+<p>
+	<div style="width:250px;">
+	<%= u.text_field :album_name, :placeholder=>"Enter Album Name",:class=>"form-control"%></div>
+	<%= u.hidden_field :user_id, value: current_user.id %>
+	<br/>
+	<%=u.submit "Add image",:class=>"btn btn-primary"  %>
+	
+	
+	</p>
+	</div>
+	</div>
+	<table style="width:30%; margin-left:100px;">
+		<tr>
+ <td><p><span style="font-size:30px;">Click to see your albums </span></h3></p></td>
+ <td>
+ 	<div class="move">
+ 		<%=link_to  image_tag("foldershow.gif", :alt=>"Click to see all albums", :height=>130, :width=>130), user_albums_path  %>
+ 		</div>
+ 		</td>
+
+</tr>
+</table>
+	<%end%>
+	
+
+	</body></html>
+	
+
+
