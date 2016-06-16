@@ -7,8 +7,7 @@ class AddAttachmentUploadToImages < ActiveRecord::Migration
     end
   end
   def self.down
-    t.change :upload_file_name, :original_filename
-      t.change :upload_content_type, :content_type
+    
     end
   end
-end
+
