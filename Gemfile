@@ -17,7 +17,15 @@ gem 'simple_form'
 gem 'therubyracer', :platform=>:ruby
 gem "paperclip", "~> 4.2.0"
 gem 'pg'
+gem 'figaro'
+gem 'puma'
+
 group :development do
+   gem 'capistrano'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rvm'	
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
   gem 'quiet_assets'
