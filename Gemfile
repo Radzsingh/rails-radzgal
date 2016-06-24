@@ -20,11 +20,26 @@ gem 'pg'
 gem 'figaro'
 gem 'puma'
 
+
 group :development do
    gem 'capistrano'
   gem 'capistrano3-puma'
   gem 'capistrano-rails', require: false
   gem 'capistrano-bundler', require: false
+  gem 'capistrano-bundler'
+  gem 'capistrano-rvm'	
+  gem 'better_errors'
+  gem 'binding_of_caller', :platforms=>[:mri_21]
+  gem 'quiet_assets'
+  gem 'rails_layout'
+end
+
+group :production do
+   gem 'capistrano'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-bundler'
   gem 'capistrano-rvm'	
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
