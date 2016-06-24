@@ -2,7 +2,7 @@
 lock '3.5.0'
 
 set :application, 'rails-radzgal'
-set :repo_url, 'github.com/Radzsingh/rails-radzgal.git'
+set :repo_url, 'git@github.com:Radzsingh/rails-radzgal.git'
 set :branch, :master
 set :deploy_to, '/home/radz/rails-radzgal'
 set :linked_files, %w{config/database.yml config/application.yml}

@@ -95,14 +95,5 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  server '54.187.160.13',
-   user: 'radz',
-   roles: %w{web app},
-   ssh_options: {
-     user: 'radz', # overrides user setting above
-     keys: %w(/home/enbake/.ssh/id_rsa),
-     forward_agent: true,
-     auth_methods: %w(publickey)
-     # password: 'please use keys'
-   }
+ 
 end

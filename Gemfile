@@ -12,7 +12,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'devise'
-gem 'debugger'
+gem 'byebug'
 gem 'simple_form'
 gem 'therubyracer', :platform=>:ruby
 gem "paperclip", "~> 4.2.0"

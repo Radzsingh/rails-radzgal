@@ -31,7 +31,16 @@
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
 
-
+ server '54.187.160.13',
+   user: 'radz',
+   roles: %w{web app},
+   ssh_options: {
+     user: 'radz', # overrides user setting above
+     keys: %w(/home/enbake/.ssh/id_rsa),
+     forward_agent: true,
+     auth_methods: %w(publickey)
+     # password: 'please use keys'
+   }
 
 # Custom SSH Options
 # ==================
